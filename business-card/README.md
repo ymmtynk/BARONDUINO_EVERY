@@ -8,13 +8,13 @@
 
 **表面（個人情報を匿名化）**
 
-<a href="images/RevA1_top_white_bg.png"><img src="images/RevA1_top_white_bg.png" alt="BARONDUINO EVERY PCB名刺 Rev.A1 表面（匿名化済み）" width="400"></a>
+<a href="images/RevA1_top_white_nc_v2.png"><img src="images/RevA1_top_white_nc_v2.png" alt="BARONDUINO EVERY PCB名刺 Rev.A1 表面（匿名化済み）" width="400"></a>
 
 **裏面**
 
-<a href="images/RevA1_bottom_white_bg.png"><img src="images/RevA1_bottom_white_bg.png" alt="BARONDUINO EVERY PCB名刺 Rev.A1 裏面" width="400"></a>
+<a href="images/RevA1_bottom_white_nc_v2.png"><img src="images/RevA1_bottom_white_nc_v2.png" alt="BARONDUINO EVERY PCB名刺 Rev.A1 裏面" width="400"></a>
 
-基板外側の背景を白にして輪郭を見やすくしています。画像をクリックすると拡大できます。基板の外形・ミシン目・配線・ロゴは元の設計画像に準拠しています。
+基板外側の背景に加え、NCカットの切り欠きとミシン目の穴も白にして輪郭を見やすくしています。画像をクリックすると拡大できます。基板の外形・ミシン目・配線・ロゴは元の設計画像に準拠しています。
 
 ## 実際の基板とサイズ感
 
