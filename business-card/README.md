@@ -1,32 +1,36 @@
 # BARONDUINO EVERY PCB Business Card
 
-## 名刺の構成（個人情報を含まない模式図）
+## 名刺の構成
+
+**名刺そのものが、切り離して使える電子回路。**
+
+一枚のPCB名刺に、マイコン本体のHEAD、開発用インターフェースのBODY、NFCアンテナとQRコードを組み込んだ設計です。
 
 ```mermaid
-flowchart TB
+flowchart LR
     CARD["PCB名刺 Rev.A1<br/>91 × 55 mm"]
-    CARD --> HEAD["切り離せる HEAD<br/>ATmega4809"]
-    CARD --> BODY["切り離せる BODY<br/>USB-C / CH552G"]
-    CARD --> NFC["NFC / QR<br/>このGitHubへ"]
-    NFC --> LED["通信時のLED点灯を意図した回路"]
+    HEAD["HEAD<br/>切り離して機器へ埋め込み"]
+    BODY["BODY<br/>切り離して開発時に使用"]
+    NFC["NFCアンテナ・QRコード<br/>名刺上に残る"]
+    CARD -->|分離して利用| HEAD
+    CARD -->|分離して利用| BODY
+    CARD -->|名刺の機能| NFC
+    BODY <-->|裏面5接点| HEAD
+    DEBUG["表面デバッグ4端子<br/>埋め込み後もFW修正・書き換え"]
+    DEBUG <-->|アクセス| HEAD
 ```
 
+*配置や切り離し位置を表す製造図ではありません。HEADの表面デバッグ端子は、埋め込み後のファームウェア修正・書き込みにも利用する設計です。*
+
+## 実際の基板とサイズ感
+
+![実際のHEAD・BODY基板PNGを使った100円玉・500円玉との同一縮尺比較](../assets/pcb-size-comparison.svg)
+
+*基板は設計データから出力したPNG、硬貨は直径に基づく模式図です。すべて同一縮尺で比較しています。名刺の個人情報を含む券面は掲載していません。*
 
 **A business card that is also a circuit board.**
 
 BARONDUINO EVERYの設計思想を、一枚のプリント基板に凝縮したPCB名刺です。切り離せるHEADとBODY、QRコード、NFCタグ、LEDを備えています。
-
-## 切り離して使う基板
-
-**HEAD（Rev.A10）**
-
-<img src="../assets/head-reva10-top.png" alt="HEADの単体基板画像。名刺券面は含まない" width="650">
-
-**BODY（Rev.A3）**
-
-<img src="../assets/body-reva3-top.png" alt="BODYの単体基板画像。名刺券面は含まない" width="420">
-
-*これらは単体基板の設計PNGであり、名刺券面の切り出しではありません。表示倍率はそれぞれ異なります。*
 
 ## 構成 — Rev.A1（設計資料）
 
@@ -45,6 +49,10 @@ BARONDUINO EVERYの設計思想を、一枚のプリント基板に凝縮したP
 - [NFCの仕様と設定](nfc.md)
 
 名刺は部品未実装でも配布されます。部品実装には微細な表面実装部品（0402、0.4 mmピッチQFN等）の作業経験・設備が必要です。
+
+## カスタムPCB名刺という可能性
+
+名刺の氏名・所属・連絡先などの表示内容を差し替え、HEAD・BODY・NFCの共通設計を活かした個別仕様のPCB名刺も構想できます。ただし、**現時点で受注製作サービスを提供しているという案内ではありません**。製作条件・費用・権利関係・個人情報の取り扱いは別途検討が必要です。
 
 ## プライバシーと公開範囲
 
