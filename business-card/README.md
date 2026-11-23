@@ -1,5 +1,17 @@
 # BARONDUINO EVERY PCB Business Card
 
+## 名刺の構成（個人情報を含まない模式図）
+
+```mermaid
+flowchart TB
+    CARD["PCB名刺 Rev.A1<br/>91 × 55 mm"]
+    CARD --> HEAD["切り離せる HEAD<br/>ATmega4809"]
+    CARD --> BODY["切り離せる BODY<br/>USB-C / CH552G"]
+    CARD --> NFC["NFC / QR<br/>このGitHubへ"]
+    NFC --> LED["通信時のLED点灯を意図した回路"]
+```
+
+
 **A business card that is also a circuit board.**
 
 BARONDUINO EVERYの設計思想を、一枚のプリント基板に凝縮したPCB名刺です。切り離せるHEADとBODY、QRコード、NFCタグ、LEDを備えています。
