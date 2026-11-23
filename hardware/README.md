@@ -5,11 +5,21 @@
 ## システム構成
 
 ```mermaid
-flowchart LR
-    PC["PC / Arduino IDE"] -->|USB-C| BODY["BODY<br/>CH552G<br/>USB / SerialUPDI"]
-    BODY -->|5 pogo contacts| HEAD["HEAD<br/>ATmega4809"]
-    HEAD -->|24 side terminals| DEVICE["組込み先の回路・機器"]
+flowchart TB
+    PC["PC / 開発環境"]
+    BODY["BODY<br/>USB / SerialUPDI"]
+    HEAD["HEAD<br/>ATmega4809"]
+    DEVICE["組込み先の回路・機器"]
+    ADAPTER["書き込み・デバッグ用インターフェース"]
+
+    PC <-->|USB-C| BODY
+    BODY <-->|裏面5接点 / ポゴピン| HEAD
+    HEAD <-->|側面24端子| DEVICE
+    PC <-->|USB等| ADAPTER
+    ADAPTER <-->|表面4端子<br/>組込み後もFW修正・書き換え| HEAD
 ```
+
+**BODYを取り外して機器に組み込んだ後も、HEAD表面のデバッグ端子から繰り返し書き込み・修正開発ができます。** 図のデバッグ用インターフェースは概念表現で、具体的な対応機器・接続方法は検証後に公開します。
 
 *機能を示す概念図です。寸法・端子位置を示す製造図ではありません。*
 
