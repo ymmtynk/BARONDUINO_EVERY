@@ -1,5 +1,14 @@
 # BARONDUINO EVERY
 
+## BARONDUINO EVERYを図で見る
+
+```mermaid
+flowchart LR
+    A["HEAD<br/>ATmega4809<br/>埋め込む本体"] <-->|"裏面接点 / ポゴピン"| B["BODY<br/>CH552G<br/>書き込み用"]
+    B <-->|USB-C| C["PC"]
+```
+
+
 ### Born to be Embedded.
 **組み込みから、埋め込みへ。**
 
