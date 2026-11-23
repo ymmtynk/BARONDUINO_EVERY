@@ -25,6 +25,12 @@ flowchart TB
 
 ## HEAD — Rev.A10
 
+| 表面：デバッグ4端子 | 裏面：BODY接続用5接点 |
+| :---: | :---: |
+| <img src="../assets/head-reva10-top.png" alt="HEAD表面の実基板PNG" width="460"> | <img src="../assets/head-reva10-bottom.png" alt="HEAD裏面の実基板PNG" width="460"> |
+
+*いずれもRev.A10の設計データから出力した未実装基板のPNGです。名刺の券面画像は使用していません。*
+
 - **基板外形: 25.40 × 10.16 mm、厚さ0.8 mm（FR-4、2層）**
 - MCU: Microchip ATmega4809、VQFN-48、6 × 6 mm、0.4 mmピッチ
 - 電源: 5 V
@@ -50,6 +56,10 @@ flowchart TB
 *概念図です。表面デバッグ端子の実際の位置・形状・ピン配置は基板レイアウト図で確認してください。*
 
 ## BODY — Rev.A3
+
+<img src="../assets/body-reva3-top.png" alt="BODY Rev.A3の実基板PNG" width="470">
+
+*Rev.A3の未実装基板レンダリングです。*
 
 - CH552GによるUSB通信・SerialUPDIインターフェース
 - USB Type-C
