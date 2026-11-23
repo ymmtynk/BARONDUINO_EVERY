@@ -21,11 +21,22 @@ BARONDUINO EVERYでは、機器に残すマイコン本体を **HEAD**、開発�
 開発用の回路を、すべての完成品に持たせる必要はありません。必要なときに使い、不要になれば切り離せる。それがHEAD/BODYという構成です。
 
 ```mermaid
-flowchart LR
-    PC["PC / 開発環境"] <-->|USB-C| BODY["BODY<br/>開発用インターフェース"]
-    BODY <-->|裏面5接点 / ポゴピン| HEAD["HEAD<br/>ATmega4809"]
-    HEAD -->|側面24端子| DEVICE["組込み先の機器"]
+flowchart TB
+    PC["PC / 開発環境"]
+    BODY["BODY<br/>USB-C / CH552G"]
+    HEAD["HEAD<br/>ATmega4809"]
+    DEVICE["組込み先の機器"]
+    ADAPTER["書き込み・デバッグ用インターフェース"]
+
+    PC <-->|USB-C| BODY
+    BODY <-->|裏面5接点 / ポゴピン| HEAD
+    HEAD <-->|側面24端子| DEVICE
+
+    PC <-->|USB等| ADAPTER
+    ADAPTER <-->|表面デバッグ端子<br/>組込み後もFW修正・書き換え| HEAD
 ```
+
+**書き込み経路は2つあります。** 開発時のBODY経由に加え、機器に組み込んだ後もHEAD表面のデバッグ端子からファームウェアを修正・書き換えできます。図中のデバッグ用インターフェースは機能上の概念であり、具体的な対応機器・接続方法は検証後に公開します。
 
 *構成の概念図です。実際の基板形状・配置を示す図ではありません。*
 
