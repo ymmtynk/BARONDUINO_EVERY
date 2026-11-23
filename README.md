@@ -17,20 +17,6 @@ BARONDUINOは、その疑問から生まれました。
 
 *HEAD/BODYは実際の基板PNGを使用し、硬貨は寸法比較用の模式図です。すべて同じ縮尺（15 px/mm）で配置しています。*
 
-## 実際の基板を見てみる
-
-**HEAD Rev.A10 — 25.40 × 10.16 mm（厚さ0.8 mm）**
-
-<img src="assets/head-reva10-top.png" alt="HEAD Rev.A10の実際の基板レンダリング。表面デバッグ4端子と側面24端子が見える" width="680">
-
-*設計データから出力された基板PNG。未実装状態の表面です。写真・想像図ではありません。*
-
-**BODY Rev.A3 — 31 × 28 mm（厚さ1.6 mm）**
-
-<img src="assets/body-reva3-top.png" alt="BODY Rev.A3の実際の基板レンダリング" width="410">
-
-*HEADとBODYの画像はそれぞれ見やすい倍率で表示しています。上の2画像は同一縮尺ではありません。*
-
 ## なぜ、HEADとBODYに分けたのか
 
 BARONDUINO EVERYでは、機器に残すマイコン本体を **HEAD**、開発時に使うUSBインターフェースを **BODY** として分離しました。
