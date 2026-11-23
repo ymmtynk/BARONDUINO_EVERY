@@ -16,6 +16,18 @@ flowchart TB
 
 BARONDUINO EVERYの設計思想を、一枚のプリント基板に凝縮したPCB名刺です。切り離せるHEADとBODY、QRコード、NFCタグ、LEDを備えています。
 
+## 切り離して使う基板
+
+**HEAD（Rev.A10）**
+
+<img src="../assets/head-reva10-top.png" alt="HEADの単体基板画像。名刺券面は含まない" width="650">
+
+**BODY（Rev.A3）**
+
+<img src="../assets/body-reva3-top.png" alt="BODYの単体基板画像。名刺券面は含まない" width="420">
+
+*これらは単体基板の設計PNGであり、名刺券面の切り出しではありません。表示倍率はそれぞれ異なります。*
+
 ## 構成 — Rev.A1（設計資料）
 
 - 外形: 91 × 55 mm、角R2.5 mm、FR-4、厚さ0.8 mm、2層
