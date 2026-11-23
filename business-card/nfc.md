@@ -1,5 +1,18 @@
 # NFC / LED — PCB Business Card Rev.A1
 
+## 動作の概念図
+
+```mermaid
+flowchart LR
+    PHONE["スマートフォン"] -. "13.56 MHz NFC" .-> COIL["基板コイル<br/>7ターン"]
+    COIL --> TAG["NT3H2111"]
+    TAG -->|VOUT| R["電流制限抵抗"]
+    R --> LED["LED"]
+    LED -->|FD| TAG
+    TAG --> URL["NDEF URL<br/>GitHub"]
+```
+
+
 ## 仕組み
 
 - NFC IC: **NXP NT3H2111W0FHKH**（NTAG I²C plus 1k、NFC Forum Type 2 Tag）
